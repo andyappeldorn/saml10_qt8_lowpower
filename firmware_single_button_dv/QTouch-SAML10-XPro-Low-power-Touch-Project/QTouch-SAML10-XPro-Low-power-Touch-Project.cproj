@@ -128,7 +128,7 @@
           <AcmeProjectActionInfo Action="File" Source="main.c" IsConfig="false" Hash="n+cfW0ZVoSkkzMPsZSXslw" />
           <AcmeProjectActionInfo Action="File" Source="driver_init.c" IsConfig="false" Hash="+M2awsQwFqonwoJRDbaQ6Q" />
           <AcmeProjectActionInfo Action="File" Source="driver_init.h" IsConfig="false" Hash="Hnq+IwdnDxiPO86dzEvI7A" />
-          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="WlauFiPymwN3MdWgMzO/+g" />
+          <AcmeProjectActionInfo Action="File" Source="atmel_start_pins.h" IsConfig="false" Hash="n8opTeMsn6/h/20c+hh9fw" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.h" IsConfig="false" Hash="91KHo1NvyyhMGxhft5TUag" />
           <AcmeProjectActionInfo Action="File" Source="examples/driver_examples.c" IsConfig="false" Hash="XMyIRXiCoYOxGGObUCfHCg" />
           <AcmeProjectActionInfo Action="File" Source="hal/include/hal_timer.h" IsConfig="false" Hash="5pZVthtMl40VMvofOld2ng" />
@@ -153,7 +153,7 @@
           <AcmeProjectActionInfo Action="File" Source="hpl/port/hpl_gpio_base.h" IsConfig="false" Hash="YuxzX7Tm9oKu1efgKHVe8g" />
           <AcmeProjectActionInfo Action="File" Source="hpl/rtc/hpl_rtc.c" IsConfig="false" Hash="O9F343tUjCAFYGqJ8652iQ" />
           <AcmeProjectActionInfo Action="File" Source="hpl/rtc/hpl_rtc_base.h" IsConfig="false" Hash="6MZP9mg3QA6lytcm00LePQ" />
-          <AcmeProjectActionInfo Action="File" Source="qtouch/touch.h" IsConfig="false" Hash="Iot6+KxtdzpUKAo9pC4u1Q" />
+          <AcmeProjectActionInfo Action="File" Source="qtouch/touch.h" IsConfig="false" Hash="dUL9+os9kyBFBrJvgOZC0A" />
           <AcmeProjectActionInfo Action="File" Source="qtouch/touch.c" IsConfig="false" Hash="C8MojXaknQH0IgsMczax0Q" />
           <AcmeProjectActionInfo Action="File" Source="qtouch/include/touch_api_ptc.h" IsConfig="false" Hash="8n6Wi3z4P4e7UhSrlL02JQ" />
           <AcmeProjectActionInfo Action="File" Source="examples/touch_example.c" IsConfig="false" Hash="vWqvLDQGRo6hA8Kny11+Qw" />
@@ -162,13 +162,13 @@
           <AcmeProjectActionInfo Action="File" Source="atmel_start.c" IsConfig="false" Hash="3K6DtdnDW2dCf6HdZTthNw" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_dmac_config.h" IsConfig="true" Hash="Ttqf3+kBkfF2HRTTWhI8GQ" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_evsys_config.h" IsConfig="true" Hash="xWquYJBdi7y0z3WaOFA9CQ" />
-          <AcmeProjectActionInfo Action="File" Source="config/hpl_gclk_config.h" IsConfig="true" Hash="YAZoRAVoYwLiYRRhbOff3w" />
+          <AcmeProjectActionInfo Action="File" Source="config/hpl_gclk_config.h" IsConfig="true" Hash="WRXC6DNpyBFWjLt+Ex+iFg" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_mclk_config.h" IsConfig="true" Hash="wNdUfe5jKn7cXdERlfgUpg" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_osc32kctrl_config.h" IsConfig="true" Hash="tSuqjHsX4f+m+QODevCOyA" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_oscctrl_config.h" IsConfig="true" Hash="qg6DR8cUcfC49FL2a9VxhA" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_port_config.h" IsConfig="true" Hash="RZW3kJE9DV2Pt1QsLR2RSQ" />
           <AcmeProjectActionInfo Action="File" Source="config/hpl_rtc_config.h" IsConfig="true" Hash="9Sbx76PF6xLT51LkXmYcwg" />
-          <AcmeProjectActionInfo Action="File" Source="config/peripheral_clk_config.h" IsConfig="true" Hash="MEdZsAXXIrorkAXBe66iPw" />
+          <AcmeProjectActionInfo Action="File" Source="config/peripheral_clk_config.h" IsConfig="true" Hash="6u5DsBKRj8WqEtYjUTXZaQ" />
         </AcmeActionInfos>
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
@@ -253,6 +253,8 @@
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
     <ListValues>
+      <Value>..\qtouch\lib\gcc</Value>
+      <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>
@@ -371,6 +373,8 @@
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
     <ListValues>
+      <Value>..\qtouch\lib\gcc</Value>
+      <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>
       <Value>..\qtouch\lib\gcc</Value>

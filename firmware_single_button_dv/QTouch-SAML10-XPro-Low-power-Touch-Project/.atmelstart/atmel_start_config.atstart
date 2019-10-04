@@ -67,7 +67,7 @@ middlewares:
     api: QTouch:General:Node
     dependencies:
       QTouch Acquisition: QTOUCH_ACQUISITION
-      Y-line: PTC:Y/5
+      Y-line: PTC:Y/2
       PTC: PTC
   QTOUCH_SENSOR:
     user_label: QTOUCH_SENSOR
@@ -323,7 +323,7 @@ drivers:
       gclk_arch_gen_4_oe: false
       gclk_arch_gen_4_oov: false
       gclk_arch_gen_4_runstdby: false
-      gclk_gen_0_div: 1
+      gclk_gen_0_div: 4
       gclk_gen_0_div_sel: false
       gclk_gen_0_oscillator: 16MHz Internal Oscillator (OSC16M)
       gclk_gen_1_div: 4
@@ -515,13 +515,13 @@ drivers:
     api: 'Drivers:PTC:'
     configuration: {}
     optional_signals:
-    - identifier: PTC:Y/5
-      pad: PA06
+    - identifier: PTC:Y/2
+      pad: PA02
       mode: Enabled
       configuration: null
-      definition: Atmel:SAML10_Drivers:0.0.1::ATSAML10E16A-AU::optional_signal_definition::PTC.Y.5
-      name: PTC/Y/5
-      label: Y/5
+      definition: Atmel:SAML10_Drivers:0.0.1::ATSAML10E16A-AU::optional_signal_definition::PTC.Y.2
+      name: PTC/Y/2
+      label: Y/2
     variant: null
     clocks:
       domain_group:
@@ -680,11 +680,11 @@ drivers:
           evsys_clk_selection_6: Generic clock generator 0
           evsys_clk_selection_7: Generic clock generator 0
 pads:
-  PA06:
-    name: PA06
-    definition: Atmel:SAML10_Drivers:0.0.1::ATSAML10E16A-AU::pad::PA06
+  PA02:
+    name: PA02
+    definition: Atmel:SAML10_Drivers:0.0.1::ATSAML10E16A-AU::pad::PA02
     mode: Peripheral IO
-    user_label: PA06
+    user_label: PA02
     configuration: null
   LED:
     name: PA07
