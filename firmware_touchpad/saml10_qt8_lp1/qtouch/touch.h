@@ -454,7 +454,7 @@ extern "C" {
  * Range: 1 to 65535
  * Default value: 5000
  */
-#define DEF_TOUCH_TIMEOUT 5000
+#define DEF_TOUCH_TIMEOUT 4000
 
 /* Defines drift measurement period
  * During low-power measurement, it is recommended to perform periodic active measurement to perform drifting.
@@ -462,16 +462,16 @@ extern "C" {
  * Range: 1 to 65535 ( should be more than QTM_AUTOSCAN_TRIGGER_PERIOD)
  * Default value: 2000
  */
-#define DEF_TOUCH_DRIFT_PERIOD_MS 32000
+#define DEF_TOUCH_DRIFT_PERIOD_MS 2000
 
 /**********************************************************/
 /***************** Communication - Surface Utility ******************/
 /**********************************************************/
 
-#define KRONOCOMM_UART 1u
-#define KRONOCOMM_ENABLE 1u
+#define KRONOCOMM_UART 0u
+#define KRONOCOMM_ENABLE 0u
 
-#define KRONO_GESTURE_ENABLE 1u
+#define KRONO_GESTURE_ENABLE 0u
 
 #ifdef __cplusplus
 }

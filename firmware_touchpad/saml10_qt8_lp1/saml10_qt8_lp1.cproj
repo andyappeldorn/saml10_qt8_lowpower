@@ -206,8 +206,8 @@
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
     </AcmeProjectConfig>
-    <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
-    <avrtoolserialnumber>ATML2769031800000239</avrtoolserialnumber>
+    <avrtool>com.atmel.avrdbg.tool.powerdebugger</avrtool>
+    <avrtoolserialnumber>J50200001258</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x20840000</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_edbg>

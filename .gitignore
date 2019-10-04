@@ -14,3 +14,6 @@
 
 #User Specific Files
 *.atsuo
+
+#Temp files
+*~*.*

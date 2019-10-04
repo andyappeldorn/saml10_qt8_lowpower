@@ -418,7 +418,7 @@ Notes  :
 static void touch_enable_vreg_in_standby(void)
 {
 	/* Set buck regulator as Main Voltage Regulator */
-	SUPC->VREG.bit.SEL = 1;
+	SUPC->VREG.bit.SEL = 0;
 	while (SUPC->STATUS.bit.VCORERDY != 1)
 		;
 
