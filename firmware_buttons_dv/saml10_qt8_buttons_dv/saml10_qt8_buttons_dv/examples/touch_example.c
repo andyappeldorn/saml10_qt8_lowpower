@@ -151,4 +151,10 @@ void touch_status_display(void)
 	} else {
 		// LED_OFF
 	}
+	key_status = get_sensor_state(10) & KEY_TOUCHED_MASK;
+	if (0u != key_status) {
+		// LED_ON
+	} else {
+		// LED_OFF
+	}
 }

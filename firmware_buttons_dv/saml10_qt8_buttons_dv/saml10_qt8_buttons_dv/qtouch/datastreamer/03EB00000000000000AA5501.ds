@@ -74,6 +74,12 @@ D,3,10,Reference9
 D,5,10,Compensation9,F,((variable & 0x0F)*0.00675+((variable >> 4) & 0x0F)*0.0675+((variable >> 8) & 0x0F)*0.675+((variable >> 12) & 0x3) * 6.75)*2
 B,6,10,State9
 B,7,10,Threshold9
+D,2,11,Signal10
+D,3,11,Reference10
+-D,4,11,Delta10
+D,5,11,Compensation10,F,((variable & 0x0F)*0.00675+((variable >> 4) & 0x0F)*0.0675+((variable >> 8) & 0x0F)*0.675+((variable >> 12) & 0x3) * 6.75)*2
+B,6,11,State10
+B,7,11,Threshold10
 
 
 
