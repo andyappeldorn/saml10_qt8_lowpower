@@ -19,6 +19,9 @@ int main(void)
 {
 	/* Initializes MCU, drivers and middleware */
 	atmel_start_init();
+	SUPC->VREG.bit.SEL = 0;
+	while (SUPC->STATUS.bit.VCORERDY != 1)
+		;
 
 	/* Replace with your application code */
 	while (1) {

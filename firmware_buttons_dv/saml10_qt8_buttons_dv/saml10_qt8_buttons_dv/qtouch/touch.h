@@ -86,52 +86,52 @@ extern "C" {
  */
 #define NODE_0_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(9) | Y(14), Y(8), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(2) | Y(9) | Y(14), Y(8), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_1_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(16) | Y(17) | Y(8) | Y(9) | Y(14), Y(4), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(2) | Y(8) | Y(9) | Y(14), Y(4), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_2_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(10), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(3) | Y(16) | Y(17) | Y(4) | Y(2) | Y(8) | Y(9) | Y(14), Y(10), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_3_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(16) | Y(4) | Y(8) | Y(9) | Y(14), Y(17), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(4) | Y(2) | Y(8) | Y(9) | Y(14), Y(17), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_4_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(16), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(17) | Y(4) | Y(2) | Y(8) | Y(9) | Y(14), Y(16), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_5_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(2) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(15), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(2) | Y(8) | Y(9) | Y(14), Y(15), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_6_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9), Y(14), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(2) | Y(8) | Y(9), Y(14), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_7_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(14), Y(9), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(2) | Y(8) | Y(14), Y(9), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_8_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(2), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(3) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(2), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_9_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(15) | Y(2) | Y(10) | Y(16) | Y(17) | Y(4) | Y(8) | Y(9) | Y(14), Y(3), 0, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(15) | Y(10) | Y(16) | Y(17) | Y(4) | Y(2) | Y(8) | Y(9) | Y(14), Y(3), 20, PRSC_DIV_SEL_1,           \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_10_PARAMS                                                                                                 \
@@ -249,7 +249,7 @@ extern "C" {
  * Range: 0-255
  * Default value: 0
  */
-#define DEF_MAX_ON_DURATION 0
+#define DEF_MAX_ON_DURATION 10
 
 /**********************************************************/
 /***************** Communication - Data Streamer ******************/
