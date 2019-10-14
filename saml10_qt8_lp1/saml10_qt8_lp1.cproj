@@ -36,7 +36,7 @@
         <documentation help="" />
         <offline-documentation help="" />
         <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.34.1" />
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.37" />
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
@@ -206,8 +206,8 @@
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
     </AcmeProjectConfig>
-    <avrtool>com.atmel.avrdbg.tool.edbg</avrtool>
-    <avrtoolserialnumber>ATML2769041800000634</avrtoolserialnumber>
+    <avrtool>com.atmel.avrdbg.tool.powerdebugger</avrtool>
+    <avrtoolserialnumber>J50200001258</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x20840000</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_edbg>
@@ -218,21 +218,10 @@
         <InterfaceName>SWD</InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
-      <ToolNumber>ATML2769041800000634</ToolNumber>
+      <ToolNumber>ATML2769031800000239</ToolNumber>
       <ToolName>EDBG</ToolName>
     </com_atmel_avrdbg_tool_edbg>
     <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
-    <com_atmel_avrdbg_tool_atmelice>
-      <ToolOptions>
-        <InterfaceProperties>
-          <SwdClock>0</SwdClock>
-        </InterfaceProperties>
-        <InterfaceName>SWD</InterfaceName>
-      </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
-      <ToolNumber>J41800065654</ToolNumber>
-      <ToolName>Atmel-ICE</ToolName>
-    </com_atmel_avrdbg_tool_atmelice>
     <com_atmel_avrdbg_tool_powerdebugger>
       <ToolOptions>
         <InterfaceProperties>
