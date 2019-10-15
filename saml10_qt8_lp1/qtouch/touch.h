@@ -38,7 +38,7 @@ extern "C" {
  * Range: 1 to 255.
  * Default value: 20.
  */
-#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 10
+#define DEF_TOUCH_MEASUREMENT_PERIOD_MS 1
 
 /* Defines the Type of sensor
  * Default value: NODE_MUTUAL.
@@ -80,65 +80,127 @@ extern "C" {
  * Default value: 1
  */
 #define DEF_NUM_CHANNELS (11)
+//#define EN_DRIVEN_SHIELD
 
 /* Defines node parameter setting
  * {Shield line, Y-line, Charge Share Delay, Prescaler, NODE_G(Analog Gain , Digital Gain), filter level}
  */
+#ifdef EN_DRIVEN_SHIELD
+//#warning DS ENABLED
 #define NODE_0_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(8), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(8), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
+
 #define NODE_1_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(4), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(4), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_2_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(9) | Y(2) | Y(3), Y(10), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(9) | Y(2) | Y(3), Y(10), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_3_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(10) | Y(9) | Y(2) | Y(3), Y(17), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(10) | Y(9) | Y(2) | Y(3), Y(17), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_4_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(16), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(16), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_5_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(15), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(15), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_6_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(14), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2) | Y(3), Y(14), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_7_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(2) | Y(3), Y(9), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(2) | Y(3), Y(9), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_8_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(3), Y(2), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(3), Y(2), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_9_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2), Y(3), 10, PRSC_DIV_SEL_1,            \
+		Y(11) | Y(8) | Y(4) | Y(15) | Y(14) | Y(16) | Y(17) | Y(10) | Y(9) | Y(2), Y(3), 5, PRSC_DIV_SEL_1,            \
 		    NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
 	}
 #define NODE_10_PARAMS                                                                                                  \
 	{                                                                                                                  \
-		Y(9) | Y(11) | Y(8) |  Y(15) |  Y(16) |  Y(3) | Y(4) |Y(17) |Y(14) | Y(2),Y(10)  , 10, PRSC_DIV_SEL_1,            \
+		Y(9) | Y(11) | Y(8) | Y(15) | Y(16) | Y(3) | Y(4) | Y(17) | Y(14) | Y(2), Y(10), 5, PRSC_DIV_SEL_1,            \
 		NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                                                                 \
 	}
+#else
+//#warning DS DISABLED
+#define NODE_0_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(8), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_1_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(4), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_2_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(10), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_3_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(17), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_4_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(16), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_5_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(15), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_6_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(14), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_7_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(9), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_8_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(2), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_9_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(11), Y(3), 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_1), FILTER_LEVEL_16                                                                 \
+}
+#define NODE_10_PARAMS                                                                                                  \
+{                                                                                                                  \
+	Y(9) | Y(11) | Y(8) |  Y(15) |  Y(16) |  Y(3) | Y(4) |Y(17) |Y(14) | Y(2),Y(10)  , 10, PRSC_DIV_SEL_1,            \
+	NODE_GAIN(GAIN_1, GAIN_2), FILTER_LEVEL_16                                                                 \
+}
+#endif
 
 /**********************************************************/
 /***************** Key Params   ******************/
@@ -458,7 +520,7 @@ extern "C" {
  * Range: 1 to 65535 ( should be more than QTM_AUTOSCAN_TRIGGER_PERIOD)
  * Default value: 2000
  */
-#define DEF_TOUCH_DRIFT_PERIOD_MS 5000		// JC was 2000
+#define DEF_TOUCH_DRIFT_PERIOD_MS 20000		// JC was 2000
 
 /**********************************************************/
 /***************** Communication - Surface Utility ******************/

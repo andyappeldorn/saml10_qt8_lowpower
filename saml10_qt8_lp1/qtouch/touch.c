@@ -418,7 +418,7 @@ Notes  :
 static void touch_enable_vreg_in_standby(void)
 {
 	/* Set buck regulator as Main Voltage Regulator */
-	SUPC->VREG.bit.SEL = 1;
+	SUPC->VREG.bit.SEL = 0;
 	while (SUPC->STATUS.bit.VCORERDY != 1)
 		;
 
@@ -429,9 +429,9 @@ static void touch_enable_vreg_in_standby(void)
 	PM->PWCFG.bit.RAMPSWC = PM_PWCFG_RAMPSWC_4KB_Val;
 
 	/* Enable VREG to run on demand and select PL0 during standby*/
-	SUPC->VREG.bit.RUNSTDBY = 1;
-	SUPC->VREG.bit.LPEFF    = 1;
-	SUPC->VREG.bit.STDBYPL0 = 1;
+	SUPC->VREG.bit.RUNSTDBY = 0;
+	SUPC->VREG.bit.LPEFF    = 0;
+	SUPC->VREG.bit.STDBYPL0 = 0;
 	while (!(SUPC->STATUS.reg & SUPC_STATUS_VREGRDY))
 		;
 }

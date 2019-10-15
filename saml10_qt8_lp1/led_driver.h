@@ -10,7 +10,7 @@
 
 #include "touch.h"
 
-#define ENABLE_LED 1u
+#define ENABLE_LED 0u
 
 #if ENABLE_LED == 1u
 
