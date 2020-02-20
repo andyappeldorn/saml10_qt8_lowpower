@@ -223,10 +223,20 @@ Output : none
 Notes  :
 ============================================================================*/
 /* Touch sensors config - assign nodes to buttons / wheels / sliders / surfaces / water level / etc */
-static touch_ret_t touch_sensors_config(void)
+//static touch_ret_t touch_sensors_config(void)
+static __attribute__((optimize("O0")))  touch_ret_t touch_sensors_config(void)
 {
 	uint16_t    sensor_nodes;
 	touch_ret_t touch_ret = TOUCH_SUCCESS;
+	
+	/* custom calibration routine for low cc value workaround */
+	volatile touch_ret_t touch_return_temp;
+	volatile touch_ret_t touch_return_val[10];
+	
+	volatile uint16_t cc_Vals[10];
+	volatile uint16_t sensor_states[10];
+	volatile uint16_t cal_status[10];
+	volatile uint16_t u16temp;
 
 	/* Init acquisition module */
 	qtm_ptc_init_acquisition_module(&qtlib_acq_set1);
@@ -237,11 +247,24 @@ static touch_ret_t touch_sensors_config(void)
 	/* Initialize sensor nodes */
 
 	for (sensor_nodes = 0u; sensor_nodes < DEF_NUM_CHANNELS; sensor_nodes++)
-
 	{
 		/* Enable each node for measurement and mark for calibration */
 		qtm_enable_sensor_node(&qtlib_acq_set1, sensor_nodes);
 		qtm_calibrate_sensor_node(&qtlib_acq_set1, sensor_nodes);
+		
+		/* custom calibration routine for low cc value workaround */
+/*		qtm_enable_sensor_node(&qtlib_acq_set1, sensor_nodes);	// enable sensor
+		touch_return_temp = qtm_calibrate_sensor_node(&qtlib_acq_set1, sensor_nodes);	// calibrate sensor
+		touch_return_val[sensor_nodes] = touch_return_temp;	// save return code
+		
+		u16temp = get_sensor_cc_val(sensor_nodes);
+		cc_Vals[sensor_nodes] = u16temp;
+		
+		u16temp = get_sensor_state(sensor_nodes);
+		sensor_states[sensor_nodes] = u16temp;
+		
+		_delay_cycles(1);
+*/
 	}
 
 	/* Enable sensor keys and assign nodes */
