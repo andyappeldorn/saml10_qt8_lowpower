@@ -178,6 +178,7 @@ Notes  :
 static void qtm_measure_complete_callback(void)
 {
 	touch_postprocess_request = 1u;
+	// @appel - acquisition timing output I/O toggle
 } /*============================================================================
  static void qtm_error_callback(uint8_t error)
  ------------------------------------------------------------------------------
