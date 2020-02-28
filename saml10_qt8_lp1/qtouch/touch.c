@@ -251,20 +251,6 @@ static __attribute__((optimize("O0")))  touch_ret_t touch_sensors_config(void)
 		/* Enable each node for measurement and mark for calibration */
 		qtm_enable_sensor_node(&qtlib_acq_set1, sensor_nodes);
 		qtm_calibrate_sensor_node(&qtlib_acq_set1, sensor_nodes);
-		
-		/* custom calibration routine for low cc value workaround */
-/*		qtm_enable_sensor_node(&qtlib_acq_set1, sensor_nodes);	// enable sensor
-		touch_return_temp = qtm_calibrate_sensor_node(&qtlib_acq_set1, sensor_nodes);	// calibrate sensor
-		touch_return_val[sensor_nodes] = touch_return_temp;	// save return code
-		
-		u16temp = get_sensor_cc_val(sensor_nodes);
-		cc_Vals[sensor_nodes] = u16temp;
-		
-		u16temp = get_sensor_state(sensor_nodes);
-		sensor_states[sensor_nodes] = u16temp;
-		
-		_delay_cycles(1);
-*/
 	}
 
 	/* Enable sensor keys and assign nodes */
@@ -291,6 +277,11 @@ Notes  :
 ============================================================================*/
 static void qtm_measure_complete_callback(void)
 {
+	// @todo - insert acquisition timing port toggle here
+	//gpio_toggle_pin_level(GPIO(GPIO_PORTA, 6));	// do a hi lo transition for signal?
+	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), false);
+	_delay_cycles(1);
+	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), true);
 	touch_postprocess_request = 1u;
 } /*============================================================================
  static void qtm_error_callback(uint8_t error)

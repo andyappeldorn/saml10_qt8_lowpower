@@ -13,6 +13,14 @@ int main(void)
 	init_led_driver();
 #endif
 
+	// acquisition timing gpio
+	#define PA06 GPIO(GPIO_PORTA, 6)	// LED0
+	#define PA07 GPIO(GPIO_PORTA, 7)	// LED1
+	gpio_set_pin_level(PA06, true);
+	gpio_set_pin_level(PA07, true);
+	gpio_set_pin_direction(PA06, GPIO_DIRECTION_OUT);
+	gpio_set_pin_direction(PA07, GPIO_DIRECTION_IN);	
+	
 	/* Replace with your application code */
 	while (1) {
 		
@@ -21,8 +29,8 @@ int main(void)
 			sleep(PM_SLEEP_STANDBY);
 		}
 
-		
 		touch_process();
+		
 #if ENABLE_LED == 1u
 		/* measurement done touch flag is not used.
 		    measurement_done_touch is set only after all rebust is resolved.
