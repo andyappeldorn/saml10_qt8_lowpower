@@ -279,9 +279,9 @@ static void qtm_measure_complete_callback(void)
 {
 	// @todo - insert acquisition timing port toggle here
 	//gpio_toggle_pin_level(GPIO(GPIO_PORTA, 6));	// do a hi lo transition for signal?
-	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), false);
-	_delay_cycles(1);
-	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), true);
+//	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), false);
+//	_delay_cycles(1);
+//	gpio_set_pin_level(GPIO(GPIO_PORTA, 6), true);
 	touch_postprocess_request = 1u;
 } /*============================================================================
  static void qtm_error_callback(uint8_t error)

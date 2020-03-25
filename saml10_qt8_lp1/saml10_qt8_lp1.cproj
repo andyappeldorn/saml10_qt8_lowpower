@@ -206,8 +206,8 @@
         <NonsecureFilesInfo />
       </AcmeProjectConfig>
     </AcmeProjectConfig>
-    <avrtool>com.atmel.avrdbg.tool.powerdebugger</avrtool>
-    <avrtoolserialnumber>J50200001258</avrtoolserialnumber>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800065654</avrtoolserialnumber>
     <avrdeviceexpectedsignature>0x20840000</avrdeviceexpectedsignature>
     <avrtoolinterface>SWD</avrtoolinterface>
     <com_atmel_avrdbg_tool_edbg>
@@ -930,6 +930,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="qtouch\touch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RN4678_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RN4678_init.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
