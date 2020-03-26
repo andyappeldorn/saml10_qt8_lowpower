@@ -11,7 +11,7 @@ int main(void)
 {
 	/* Initializes MCU, drivers and middleware */
 	atmel_start_init();
-	RN4678_Init();
+//	RN4678_Init();
 	
 	#if ENABLE_LED == 1u
 	init_led_driver();

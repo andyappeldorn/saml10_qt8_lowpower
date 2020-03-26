@@ -14,7 +14,7 @@
 #include <hpl_rtc_base.h>
 
 /*! The buffer size for USART */
-#define USART_BUFFER_SIZE 16
+#define USART_BUFFER_SIZE 128
 
 struct timer_descriptor       Timer;
 struct usart_async_descriptor USART;
