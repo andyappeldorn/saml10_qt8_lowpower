@@ -75,16 +75,16 @@ void __attribute__((optimize("O0"))) RN4678_Init(void)
 
 // set flow control to off
 	init_rx_buffer();		// init rx buffer
-//	io_write(io, "SQ,0000\r\n", 9);			// send flow control off command
-//	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
+	io_write(io, "SQ,0000\r\n", 9);			// send flow control off command
+	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
 
 // set baud rate to new value
 	init_rx_buffer();		// init rx buffer
 //	io_write(io, "SU,09\r\n", 7);			// send baud rate 9600 command
 //	io_write(io, "SU,05\r\n", 7);			// send baud rate 38400 command
 //	io_write(io, "SU,04\r\n", 7);			// send baud rate 57600 command
-	io_write(io, "SU,03\r\n", 7);			// send baud rate 115200 command
-	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
+//	io_write(io, "SU,03\r\n", 7);			// send baud rate 115200 command
+//	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
 
 // send reset command to use updated parameters	
 	init_rx_buffer();		// init rx buffer
