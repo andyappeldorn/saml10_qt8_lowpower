@@ -75,28 +75,67 @@ void __attribute__((optimize("O0"))) RN4678_Init(void)
 
 // set flow control to off
 	init_rx_buffer();		// init rx buffer
-	io_write(io, "SQ,0000\r\n", 9);			// send flow control off command
-	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
+//	io_write(io, "SQ,0000\r\n", 9);			// send flow control off command
+//	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
 
 // set baud rate to new value
 	init_rx_buffer();		// init rx buffer
 //	io_write(io, "SU,09\r\n", 7);			// send baud rate 9600 command
-	io_write(io, "SU,05\r\n", 7);			// send baud rate 38400 command
+//	io_write(io, "SU,05\r\n", 7);			// send baud rate 38400 command
 //	io_write(io, "SU,04\r\n", 7);			// send baud rate 57600 command
-//	io_write(io, "SU,03\r\n", 7);			// send baud rate 115200 command
+	io_write(io, "SU,03\r\n", 7);			// send baud rate 115200 command
 	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
 
 // send reset command to use updated parameters	
 	init_rx_buffer();		// init rx buffer
-	io_write(io, "R,1\r\n", 9);			// send reset to use updated parameters
+	io_write(io, "R,1\r\n", 5);			// send reset to use updated parameters
+    for(count = 0; count <= 0xFFFF ; count ++){
+        __asm("NOP");
+    }
 // will not respond if baud has changed
 
-//    uint8_t test_val = 0;
-//    for(count = 0; count<0xFF; count++){
-//        
-//    }
-    
-	while(1);	// do not proceed past here, change baud in hpl_sercom_config.h to match
+while(1);	// do not proceed past here, change baud in hpl_sercom_config.h to match
 }
 
+void __attribute__((optimize("O0"))) RN4678_FactoryDefaults(void)
+{
+    uint32_t count = 0;
+	USART_0_setup();
+	usart_async_get_io_descriptor(&USART, &io);
+
+// flush garbage from rn4678 rx buff if any
+	io_write(io, "\r\n", 2);				// send cr lf to flush any potential garbage in rn4678 cue
+	_delay_cycles(0xFFFF);					// wait
+
+// exit command mode
+	io_write(io, "---\r\n", 5);				// send term config sequence in case in config
+	// wait sufficient amount of time to exit cmd mode, do not use strcmp() as may not already be in command mode
+    for(count = 0; count <= 0xFFFF ; count ++){
+        __asm("NOP");
+    }
+
+// enter command mode
+	init_rx_buffer();		// init rx buffer	
+	io_write(io, "$$$\r\n", 5);				// send config sequence
+	while(0 != strcmp("CMD> ", &rx_string[0]));	// verify response, halt if failed
+
+// request version number
+	init_rx_buffer();		// init rx buffer
+	io_write(io, "GDR\r\n", 5);				// send get version command
+	while(0 != strcmp("1.13\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
+
+// send factory reset command
+	init_rx_buffer();		// init rx buffer
+	io_write(io, "SF,1\r\n", 6);				// send get version command
+	while(0 != strcmp("AOK\r\nCMD> ", &rx_string[0]));	// verify response, halt if failed, this will fail if version is not supported
+
+// send reset command to use updated parameters	
+	init_rx_buffer();		// init rx buffer
+	io_write(io, "R,1\r\n", 5);			// send reset to use updated parameters
+    for(count = 0; count <= 0xFFFF ; count ++){
+        __asm("NOP");
+    }
+
+while(1);    
+}
 #endif
