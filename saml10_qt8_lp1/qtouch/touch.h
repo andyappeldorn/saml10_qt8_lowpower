@@ -84,7 +84,7 @@ extern "C" {
 /* Defines node parameter setting
  * {Shield line, Y-line, Charge Share Delay, Prescaler, NODE_G(Analog Gain , Digital Gain), filter level}
  */
-#define AN_GAIN GAIN_1
+#define AN_GAIN GAIN_2
 #define DIG_GAIN GAIN_1
 #define CSD_VAL 3
 #define FILTER_LEVEL_VAL FILTER_LEVEL_8
@@ -157,7 +157,7 @@ extern "C" {
 /* Defines Key Sensor setting
  * {Sensor Threshold, Sensor Hysterisis, Sensor AKS}
  */
-#define THRESHOLD_VAL 25
+#define THRESHOLD_VAL 35
 #define KEY_0_PARAMS                                                                                                   \
 	{                                                                                                                  \
 		THRESHOLD_VAL, HYST_25, AKS_GROUP_1                                                                                       \
@@ -473,7 +473,7 @@ extern "C" {
 #define KRONOCOMM_UART 1u
 #define KRONOCOMM_ENABLE 1u
 
-#define KRONO_GESTURE_ENABLE 1u
+#define KRONO_GESTURE_ENABLE 0u
 
 #ifdef __cplusplus
 }

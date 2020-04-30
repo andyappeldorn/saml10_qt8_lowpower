@@ -207,7 +207,7 @@ void Krono_UpdateBuffer(void)
 		if ((qtm_surface_cs_control1.qtm_surface_contact_data[0].qt_contact_status & TOUCH_ACTIVE)
 		    && (qtm_surface_cs_control1.qtm_surface_contact_data[1].qt_contact_status & TOUCH_ACTIVE))
 
-			touchRam[0] |= TOUCHSTAT_TCH_DUAL;
+			touchRam[0] |= TOUCHSTATE_TCH;  //@appel disable dual touch? // touchRam[0] |= TOUCHSTAT_TCH_DUAL;  //@appel disable dual touch?
 		else
 			touchRam[0] |= TOUCHSTATE_TCH;
 		SetIRQPin();
