@@ -473,7 +473,7 @@ extern "C" {
 #define KRONOCOMM_UART 1u
 #define KRONOCOMM_ENABLE 1u
 
-#define KRONO_GESTURE_ENABLE 0u
+#define KRONO_GESTURE_ENABLE 1u
 
 #ifdef __cplusplus
 }
