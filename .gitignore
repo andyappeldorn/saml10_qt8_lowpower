@@ -25,3 +25,6 @@ saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/Makefile-variables.mk
 saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/Package-Release.bash
 saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/private/configurations.xml
 saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/private/private.xml
+saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/Makefile-Debug.mk
+saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/Makefile-local-Debug.mk
+saml10_qt8_lp1/saml10_qt8_lp1.X/nbproject/Package-Debug.bash
